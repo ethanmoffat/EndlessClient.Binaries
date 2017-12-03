@@ -1,0 +1,12 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Target Name="CopyDependencies" AfterTargets="AfterBuild">
+        <ItemGroup>
+            <_sdl86 Include="$(MSBuildThisFileDirectory)\SDL\x86\*.*" />
+            <_sdl64 Include="$(MSBuildThisFileDirectory)\SDL\x64\*.*" />
+        </ItemGroup>
+
+        <Copy SourceFiles="@(_sdl86)" DestinationFolder="$(OutDir)x86" />
+        <Copy SourceFiles="@(_sdl64)" DestinationFolder="$(OutDir)x64" />
+
+    </Target>
+</Project>

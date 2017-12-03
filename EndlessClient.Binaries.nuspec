@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+        <id>EndlessClient.Binaries</id>
+        <version>1.0.0</version>
+        <authors>Ethan Moffat</authors>
+        <owners>ethanmoffat</owners>
+        <licenseUrl>https://opensource.org/licenses/GPL-2.0</licenseUrl>
+        <projectUrl>https://www.github.com/ethanmoffat/EndlessClient</projectUrl>
+        <!--todo: <iconUrl></iconUrl> -->
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>Initial release. Include binaries for SDL and dependencies for EndlessClient</releaseNotes>
+        <description>Binary dependencies for EndlessClient</description>
+        <copyright>Copyright ©2017 Ethan Moffat</copyright>
+        <references>
+        </references>
+    </metadata>
+
+    <files>
+        <file src="EndlessClient.Binaries.targets" target="build\net462" />
+
+        <file src="SDL\**\*.*" target="build\net462\SDL" />
+    </files>
+</package>
