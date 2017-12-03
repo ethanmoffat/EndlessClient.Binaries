@@ -20,5 +20,6 @@
         <file src="EndlessClient.Binaries.targets" target="build\net462" />
 
         <file src="SDL\**\*.*" target="build\net462\SDL" />
+        <file src="client\**\*.*" target="build\net462\client" />
     </files>
 </package>

@@ -3,10 +3,13 @@
         <ItemGroup>
             <_sdl86 Include="$(MSBuildThisFileDirectory)\SDL\x86\*.*" />
             <_sdl64 Include="$(MSBuildThisFileDirectory)\SDL\x64\*.*" />
+            <_client Include="$(MSBuildThisFileDirectory)\client\**\*.*" />
         </ItemGroup>
 
         <Copy SourceFiles="@(_sdl86)" DestinationFolder="$(OutDir)x86" />
         <Copy SourceFiles="@(_sdl64)" DestinationFolder="$(OutDir)x64" />
+        <Copy SourceFiles="@(_client)"
+              DestinationFiles="@(_client->'$(OutDir)%(RecursiveDir)%(Filename)%(Extension)')" />
 
     </Target>
 </Project>
